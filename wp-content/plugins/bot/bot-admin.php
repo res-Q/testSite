@@ -1,4 +1,4 @@
-<?php $wpdb->query("UPDATE ".$wp->prefix."bot_counter SET bot_visits = 0");?>
+<?php //$wpdb->query("UPDATE ".$wpdb->prefix."bot_counter SET bot_visits = 29");?>
 
 <div id="message" class="updated fade">
  
@@ -15,7 +15,9 @@ Bot Counter Stats Reset Page</div>
 	}
 ?>
  
-<a href="?page=<?php echo $_GET['page']; ?>&bot-counter=reset">
+<a href="?page=<?php echo $_GET['page']; 
+		 $wpdb->query("UPDATE ".$wpdb->prefix."bot_counter SET bot_visits = 0");
+		 ?>&bot-counter=reset">
     Reset Stats
 </a>
 </div>
